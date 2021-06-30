@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+</head>
+<body>
+<h1>Hello, Vue </h1>
+<div id="app">
+    <div v-if= "showBooks">
+    <p>{{title}} - {{author}} - {{app}}</p>
+    <!-- <p>{{books[0].title}} - {{ books[0].author }}</p> -->
+    <ul>
+        <li v-for="item in books"></li>
+    </ul>
+<!-- 
+    can call item or anything -->
+    </div>
+
+    <button @click="toggleShowBooks">
+    <span v-if="showBooks">Hide Books</span>
+    </button>
+    
+
+    <div v-show="showBooks">currently showing books</div>
+
+    <br>
+    <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>
+
+</div>
+
+</body>
+</html>
